@@ -1,6 +1,7 @@
 # Info
 Author: Jobert Kalil Perez
-/nDevelopment time:
+ 
+#Development time:
 - Started at Jan. 29, 5pm
 - Finished at Jan. 30, 8am
 
