@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  database:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: wevester_todo
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./
+    container_name: backend_service
+    restart: always
+    depends_on:
+      - database
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWROD: admin
+      DB_NAME: wevester_todo
+      DATABASE_URL: postgres://postgres:admin@database:5432/wevester_todo
+    ports:
+      - "4000:4000"
+    command: ["sh", "-c", "npx knex migrate:latest && node server.js"]
