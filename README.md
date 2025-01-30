@@ -1,7 +1,8 @@
-# Author: Jobert Kalil Perez
-# Development time:
-# Started at Jan. 29, 5pm
-# Finished at Jan. 30, 8am
+# Info
+Author: Jobert Kalil Perez
+Development time:
+- Started at Jan. 29, 5pm
+- Finished at Jan. 30, 8am
 
 # Testing the Backend
 change DB_HOST in .env to localhost
